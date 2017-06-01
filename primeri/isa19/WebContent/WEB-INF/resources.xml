@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+  <Resource id="WebShopDS" type="javax.sql.DataSource">
+    JdbcDriver com.mysql.jdbc.Driver
+    JdbcUrl jdbc:mysql://localhost/isa
+    UserName isa
+    Password isa
+    JtaManaged true
+    DefaultAutoCommit false 
+  </Resource>
+</tomee>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="WebShop" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>isa.webshop.model.Admin</class>
+        <class>isa.webshop.model.Category</class>
+        <class>isa.webshop.model.OrderItem</class>
+        <class>isa.webshop.model.Product</class>
+        <class>isa.webshop.model.ProductImage</class>
+        <class>isa.webshop.model.PurchaseOrder</class>
+        <class>isa.webshop.model.Supplier</class>
+        <class>isa.webshop.model.User</class>
+        <properties>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:branko"/>
+            <property name="hibernate.connection.username" value="branko"/>
+            <property name="hibernate.connection.password" value="branko"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
